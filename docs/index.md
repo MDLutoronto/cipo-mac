@@ -48,7 +48,7 @@ But here are some steps to get you started:
 
 If SQL is a new concept for you, we would first suggest you learn the basics through a tutorial, such as [this one from Tutorial Republic](https://www.tutorialrepublic.com/sql-tutorial/). You may also want to explore the [PostgreSQL documentation](https://www.postgresql.org/docs/14/index.html) to help you with your work.
 
-1. Once logged in [as described earlier](#top), at the prompt, type `module load postgresql` (and press Enter after this and any commands you type into the command prompt going forward)
+1. Once logged in [as described earlier](#access-the-high-performance-computing-environment), at the prompt, type `module load postgresql` (and press Enter after this and any commands you type into the command prompt going forward)
 	* Note there will be no visible change or messages after running some of these commands
 2. Type `psql -h ibd1 -d cipo` to start up the command-line interface to PostgreSQL and be able to query the Canadian Intellectual Property Office (CIPO) Patent Database
 3. Type `\?` for help with psql commands (whenever you see “—More—” at the bottom of the screen, press the space bar to page through the information)
@@ -254,20 +254,20 @@ If Python is new for you, we would first suggest you learn the basics through a 
     cur.close()
     con.close()
     ```
-2. Once your Python script is ready, use SCP to to upload from your local computer. This is the same for downloading ([as described earlier](#top)), but the order of directories is reversed: `scp /your/local/directory/:[filename and extension] <computecanadausername>@trillium.scinet.utoronto.ca:/home/[firstinitialofyourlastname]/<computecanadausername>/<computecanadausername>.` Note: If you are not the Principal Investigator ie. your account was sponsored by another user, you'll need to substitute that person's username in place of the second <computecanadausername>, as well as their first initial in [firstinitialofyourlastname]. In this case: 
+2. Once your Python script is ready, use SCP to to upload from your local computer. This is the same for downloading ([as described earlier](#download-the-results)), but the order of directories is reversed: `scp /your/local/directory/:[filename and extension] <computecanadausername>@trillium.scinet.utoronto.ca:/home/[firstinitialofyourlastname]/<computecanadausername>/<computecanadausername>.` Note: If you are not the Principal Investigator ie. your account was sponsored by another user, you'll need to substitute that person's username in place of the second <computecanadausername>, as well as their first initial in [firstinitialofyourlastname]. In this case: 
 ```
 scp /your/local/directory/:[filename and extension] <computecanadausername>@trillium.scinet.utoronto.ca:/home/[firstinitialofyoursponsorslastname]/<sponsorscomputecanadausername>/<computecanadausername>
 ```
 	* For example: `scp /Users/user/Documents/SciNet/mycipopythonscript.py doej@trillium.scinet.utoronto.ca:/home/j/doej/doej`
 	* For example, for a sponsored account (smithp sponsored by doej): `scp /Users/user/Documents/SciNet/mycipopythonscript.p smithp@trillium.scinet.utoronto.ca:/home/j/doej/smithp`
 	* If prompted, enter your SSH key passphrase
-3. Once your script has been uploaded, connect to Trillium [as described earlier](#top)
+3. Once your script has been uploaded, connect to Trillium [as described earlier](#access-the-high-performance-computing-environment)
 4. Next we need to set up the environment to run our Python script. Type `module load python/3.9.8`
 5. Next type `virtualenv --system-site-packages myenv`
 6. Next type `source myenv/bin/activate`
 7. Finally type `pip install psycopg2-binary`
 8. Once the package has installed, you are ready to run your Python script. Type `python mycipopythonscript.py` or substitute in the name of your Python script if you called it something else.  
 (Important Note: If querying is only a small part of the overall task, and the majority of computing effort is going into postprocessing the query results, for example, using natural language processing or graph analysis, to be done in parallel, then there are different ways to run your script that involve [submitting it as a job](https://docs.scinet.utoronto.ca/index.php/Niagara_Quickstart#Submitting_jobs) to be run. Feel free to [contact us](https://mdl.library.utoronto.ca/about/contact-form) for help.)
-9. It may take a while to run, but when it is finished you will see the command prompt again, and now if type `ls` from the Trillium prompt, you should see a new CSV file created from the Python script. Download the file ([as described earlier](#top)) and open up the file to see the results
+9. It may take a while to run, but when it is finished you will see the command prompt again, and now if type `ls` from the Trillium prompt, you should see a new CSV file created from the Python script. Download the file ([as described earlier](#download-the-results)) and open up the file to see the results
 
 These are just a few examples to help you get started, but of course there is much more you can do. If you have any questions, feel free to [contact us](https://mdl.library.utoronto.ca/about/contact-form).
