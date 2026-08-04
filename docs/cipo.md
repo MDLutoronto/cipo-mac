@@ -37,3 +37,5 @@ You query the database using SQL statements, and then can either continue to wor
 If working with object-relational databases, SQL, and/or high performance computing environments are new to you, check out the following tutorials.
 
 If you have any question, feel free to [contact us](https://mdl.library.utoronto.ca/about/contact-form).
+
+**Technique:** [Searching for maps and data](https://mdlutoronto.github.io/tutorials-search/?technique=Searching+for+maps+and+data), [Text and Data Mining](https://mdlutoronto.github.io/tutorials-search/?technique=Text+and+Data+Mining) \| **Tools:** [CIPO](https://mdlutoronto.github.io/tutorials-search/?tool=CIPO)
