@@ -1,5 +1,5 @@
 ## Site settings
-title: "Getting Started with the Canadian Intellectual Property Office (CIPO) Patent PostgreSQL Database - Mac"
+title: "Canadian Intellectual Property Office (CIPO) Patent PostgreSQL Database"
 description: "Workshops and guides from the Map & Data Library, University of Toronto"
 url: "https://MDLutoronto.github.io/cipo-mac" # change the slug to the repo's name ('jtd-template' in this case)
 repository: "MDLutoronto/cipo-mac" # for github-metadata
